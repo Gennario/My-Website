@@ -12,6 +12,16 @@ html, body {
     font-family: 'Kanit', sans-serif;
 }
 
+.reveal{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.35s ease-in !important;
+}
+.reveal.activereveal{
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .vertical_align {
     margin: 0;
     position: absolute;
@@ -20,17 +30,109 @@ html, body {
 }
 
 h1 {
+    color: white;
+
     font-weight: 700 !important;
     font-size: 70px;
     line-height: 68px;
 
     display: inline-flex;
     justify-content: center;
+    text-align: center;
 
     margin: 0;
 }
 
+h2 {
+    color: white;
+
+    font-weight: 700 !important;
+    font-size: 50px;
+    line-height: 48px;
+
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+
+    margin: 0;
+}
+
+.text {
+    color: white;
+
+    font-weight: 200 !important;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.container {
+    width: 1280px;
+    height: 100%;
+    max-width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.half {
+    width: 1280px;
+    max-width: 48%;
+}
+
+/* BUTTON */
+
 .button {
+    display: block;
+    background: unset;
+    color: #faedff;
+
+    font-weight: 550 !important;
+    font-size: 20px;
+
+    border-radius: 7px;
+
+    padding: 8px 40px;
+    outline: #c379f2 solid 1px;
+    outline-offset: -1px;
+
+    border: none;
+}
+
+.active {
+    background-color: #c379f2 !important;;
+    outline: none !important;
+}
+
+.disabled {
+    outline-color: #540588;
+    color: #540588;
+}
+
+.button:hover {
+    background-color: #c379f2;
+    color: #ffffff;
+
+    -webkit-box-shadow: 0px 0px 55px -8px rgba(195, 121, 242, 1);
+    -moz-box-shadow: 0px 0px 55px -8px rgba(195, 121, 242, 1);
+    box-shadow: 0px 0px 55px -8px rgba(195, 121, 242, 1);
+}
+
+.disabled:hover {
+    outline-color: #643c81;
+    color: #643c81;
+    background-color: unset;
+    box-shadow: unset;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_pasive {
     display: unset;
     background: unset;
     color: #c379f2;
@@ -38,23 +140,70 @@ h1 {
     font-weight: 300 !important;
     font-size: 20px;
 
-    border-radius: 50px;
+    border-radius: 10px;
 
-    padding: 5px 70px;
-    outline: #c379f2 solid 2px;
+    padding: 5px 25px 5px 55px;
     border: none;
 }
 
-.button:hover {
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+
+    text-align: left;
+
+    min-width: 150px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+
+    z-index: 1;
+    right: 0;
+
+    background-color: #643c81;
+}
+
+.dropdown-content p {
+    font-size: 13px;
+    padding: 10px 0 5px 10px;
+    color: #b38cd5;
+    margin: 0 0 10px 0;
+
+    border-bottom: #482f59 solid 1px;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 3px 0 3px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    padding: 3px 0 3px 17px !important;
+    font-weight: 450 !important;
+    background-color: #6f428f;
+}
+
+.show {
+    display: block;
+}
+
+
+.dropdown_pasive:hover, dropdown_pasive:focus {
     background-color: #c379f2;
     color: #dfccff;
 
     outline: unset;
 
-    -webkit-box-shadow: 0px 0px 55px -8px rgba(195,121,242,1);
-    -moz-box-shadow: 0px 0px 55px -8px rgba(195,121,242,1);
-    box-shadow: 0px 0px 55px -8px rgba(195,121,242,1);
+    -webkit-box-shadow: 0px 0px 55px -8px rgba(195, 121, 242, 1);
+    -moz-box-shadow: 0px 0px 55px -8px rgba(195, 121, 242, 1);
+    box-shadow: 0px 0px 55px -8px rgba(195, 121, 242, 1);
 }
+
 
 .header {
     position: absolute;
@@ -72,14 +221,17 @@ h1 {
 
 .header_desc {
     font-weight: 100 !important;
-    font-size: 35px;
-    line-height: 34px;
+    font-size: 30px !important;
+    line-height: 29px !important;
+
+    max-width: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
 
     margin-top: 30px;
 
-    display: inline-flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    text-align: center;
 }
 
 .vertical_align p {
@@ -88,7 +240,117 @@ h1 {
     line-height: 34px;
     padding: 0.5rem;
 }
+
 .vertical_align p span.typed-text {
     color: #dfccff;
     background-color: rgba(114, 92, 249, 0.4);
+}
+
+.boxes {
+    display: block;
+    position: absolute;
+
+    background: rgb(9,1,75);
+    background: linear-gradient(0deg, rgba(9,1,75,1) 0%, rgba(7,1,63,1) 79%);
+
+    top: 100%;
+    width: 100%;
+
+    padding: 10px 0 50px;
+}
+
+.box {
+    display: block;
+    width: 33.33%;
+    background: rgb(7,1,63);
+    background: linear-gradient(180deg, rgb(23, 19, 86) 0%, rgb(11, 6, 63) 100%);
+
+    border-radius: 15px;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+.box:hover {
+    transform: scale(105%);
+}
+
+
+.about {
+    background-color: #09014BFF;
+
+    display: flex;
+    position: absolute;
+
+    width: 100%;
+
+    padding: 10px 0 50px;
+
+    margin-top: 20px;
+}
+
+.about_container {
+    display: flex;
+
+    width: 100%;
+
+    margin: 15px;
+
+    text-align: left;
+    color: #c6c5c7;
+}
+
+.experience_box {
+    display: flex;
+
+    width: 100%;
+
+    margin: 20px;
+    border: 1px #c379f2 solid;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 50px !important;
+        line-height: 48px !important;
+    }
+    h2 {
+        font-size: 30px !important;
+        line-height: 28px !important;
+    }
+
+    .header_desc {
+        font-size: 25px !important;
+        line-height: 24px !important;
+        max-width: 85% !important;
+    }
+
+    .button {
+        font-size: 15px !important;
+        padding: 5px 55px !important;
+    }
+
+    .dropdown_pasive {
+        font-size: 16px !important;
+        padding: 5px 25px !important;
+    }
+
+    .container {
+        max-width: 90% !important;
+    }
+
+    .boxes ul {
+        flex-flow: wrap;
+        flex-direction: column;
+    }
+
+    .box {
+        width: unset;
+    }
 }

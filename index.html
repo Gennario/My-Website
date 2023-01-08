@@ -6,26 +6,163 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <script src="https://kit.fontawesome.com/27efa0b6cd.js" crossorigin="anonymous"></script>
+    <script src="code.js">
+        load();
+    </script>
+
 </head>
 <body>
 
 
 <div class="header">
-    <div class="vertical_align">
-        <h1 style="max-width: 35%; padding-left: 25%; padding-right: 25%">„BETTER TO FAIL
-            IN THE ORIGINALITY
-            THAN TO SUCCEED
-            IN THE COPY...“</h1>
-        <p class="header_desc" style="max-width: 45%; padding-left: 25%; padding-right: 25%">Hey, I am Lucas, but I present myself on the internet
-            as Gennario.</p>
-        <p style="margin-top: -35px">I'm a <span style="margin-left: 10px; font-weight: 300 !important;" class="typed-text"></span><span class="cursor"></span></p>
-        <button style="margin-top: 50px" class="button">See my works!</button>
+    <div class="dropdown" style="position: absolute; right: 2%; top: -4%">
+        <button onclick="toggleDropdown1()"
+                style="margin-top: 50px; outline: none; padding: 7px 20px 7px 20px !important;" class="dropdown_pasive">
+            <i class="fa-solid fa-language fa-xl"></i>
+            <i id="dropdown-arrow" class="fa-solid fa-chevron-down fa-2xs" style="margin-left: 10px"></i></button>
+        <div id="dropdown_content" class="dropdown-content">
+            <p id="lang_title">Languages</p>
+            <a id="lang_en_button" href="" onclick="setLanguage('english');">English</a>
+            <a id="lang_cz_button" href="" onclick="setLanguage('czech');">Czech</a>
+        </div>
     </div>
-    <script src="code.js"></script>
+
+
+    <div class="vertical_align">
+            <h1 id="header" style="max-width: 35%; padding-left: 25%; padding-right: 25%">„BETTER TO FAIL
+                IN THE ORIGINALITY
+                THAN TO SUCCEED
+                IN THE COPY...“</h1>
+            <p id="header_desc" class="header_desc">
+                Hello, my name is Lukáš Prchal and you may know me as Gennario... I am a Graphic and UX/UI designer and Java
+                developer from Czech Republic.
+            </p>
+            <button style="margin-top: 35px; margin-left: auto; margin-right: auto" class="button active"><i
+                    class="fa-solid fa-address-card" style="margin-right: 20px"></i><b style="font-weight: unset"
+                                                                                       id="button_more">More about me...</b>
+            </button>
+            <button style="margin-top: 15px; margin-left: auto; margin-right: auto" class="button"><i
+                    class="fa-solid fa-hand-holding-heart" style="margin-right: 20px"></i><b style="font-weight: unset"
+                                                                                             id="button_works">See my
+                works!</b></button>
+    </div>
+
+    <script>
+        reveal();
+    </script>
+
+
+    <script>
+        document.getElementById("lang_title").textContent = obj.language_menu[0].title;
+        document.getElementById("lang_cz_button").textContent = obj.language_menu[0].cz;
+        document.getElementById("lang_en_button").textContent = obj.language_menu[0].en;
+
+        document.getElementById("header").textContent = obj.messages[0].header;
+        document.getElementById("header_desc").innerHTML = obj.messages[0].headerDesc;
+
+        document.getElementById("button_more").textContent = obj.messages[0].buttonMore;
+        document.getElementById("button_works").textContent = obj.messages[0].buttonWorks;
+    </script>
 </div>
 
-<p>dsadasdas</p>
+
+<div class="boxes">
+    <div class="container">
+        <ul style="width: 100%; padding: unset; display: flex; align-items: stretch">
+            <li class="box reveal">
+                <i class="fa-solid fa-laptop fa-2xl"
+                   style="transform: scale(200%); color: #b38cd5; margin-top: 40px; margin-bottom: 40px"></i>
+                <p id="java_box_title" style="color: white; font-size: 25px; font-weight: 300">Java development</p>
+                <p id="java_box_description" style="color:#c6c5c7; font-weight: 250; font-size: 16px">
+                    If we look into my history, I've created a lot of original minecraft plugins in Java. I don't write
+                    in Java anymore.
+                </p>
+                <button id="button_unavailable" style="margin-top: 50px; margin-left: auto; margin-right: auto"
+                        class="button disabled">No
+                    longer available
+                </button>
+            </li>
+            <li class="box reveal">
+                <i class="fa-solid fa-image fa-2xl"
+                   style="transform: scale(200%); color: #b38cd5; margin-top: 40px; margin-bottom: 40px"></i>
+                <p id="gfx_box_title" style="color: white; font-size: 25px; font-weight: 300">Graphic designer</p>
+                <p id="gfx_box_description" style="color:#c6c5c7; font-weight: 250; font-size: 16px">
+                    I have several years of experience in brading design,logo designing and creating various graphic
+                    works.
+                </p>
+                <button id="button_inquiry" style="margin-top: 50px; margin-left: auto; margin-right: auto"
+                        class="button">Send a inquiry
+                </button>
+            </li>
+            <li class="box reveal">
+                <i class="fa-solid fa-diagram-project fa-2xl"
+                   style="transform: scale(200%); color: #b38cd5; margin-top: 40px; margin-bottom: 40px"></i>
+                <p id="ux_box_title" style="color: white; font-size: 25px; font-weight: 300">UX/UI designer</p>
+                <p id="ux_box_description" style="color:#c6c5c7; font-weight: 250; font-size: 16px">
+                    I design various types of websites and mobile/desktop applications.<br>Basic experience so far!
+                </p>
+                <button id="button_inquiry2" style="margin-top: 50px; margin-left: auto; margin-right: auto"
+                        class="button">Send a inquiry
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById("button_unavailable").textContent = obj.messages[0].buttonUnavailable;
+        document.getElementById("button_inquiry").textContent = obj.messages[0].buttonInquiry;
+        document.getElementById("button_inquiry2").textContent = obj.messages[0].buttonInquiry;
+
+        document.getElementById("java_box_title").textContent = obj.messages[0].javaTitle;
+        document.getElementById("java_box_description").textContent = obj.messages[0].javaDescription;
+
+        document.getElementById("gfx_box_title").textContent = obj.messages[0].gfxTitle;
+        document.getElementById("gfx_box_description").textContent = obj.messages[0].gfxDescription;
+
+        document.getElementById("ux_box_title").textContent = obj.messages[0].uxTitle;
+        document.getElementById("ux_box_description").textContent = obj.messages[0].uxDescription;
+    </script>
+
+
+    <div class="about">
+        <div class="container">
+            <div class="container half reveal">
+                <div class="about_container" style="margin: 10px 0 0 0">
+                    <p><i class="fa-solid fa-user"
+                          style="margin-right: 20px; color: #c6c5c7; transform: scale(70%); margin-top: 4px"></i>
+                    <p>Who am I?</p></p>
+                </div>
+
+                <h2 style="margin: -5px 0 15px 0; text-align: left">My name is Lukáš Prchal</h2>
+                <p class="text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arcu tempor neque lacinia
+                    pretium. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Curabitur ligula sapien,
+                    pulvinar a vestibulum quis, facilisis vel sapien. Nullam at arcu a est sollicitudin euismod. Sed vel
+                    lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Pellentesque pretium lectus id
+                    turpis. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Fusce aliquam vestibulum
+                    ipsum. Nullam dapibus fermentum ipsum. Phasellus faucibus molestie nisl. Donec quis nibh at felis
+                    congue commodo. Vivamus ac leo pretium faucibus.
+                    Nulla est. Duis condimentum augue id magna semper rutrum. In laoreet, magna id viverra tincidunt,
+                    sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Maecenas sollicitudin. Quisque
+                    tincidunt scelerisque libero.</p>
+
+                <button class="button active" style="margin-top: 25px">Read more about me...</button>
+            </div>
+            <div class="container half" style="padding-top: 40px">
+                <div class="experience_box">
+                    <h1 id="experience1" class="reveal" style="text-align: left !important; min-width: 35%; margin: auto">36</h1>
+                    <p class="text" style="color: #c6c5c7; padding-left: 10px" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arc</p>
+                </div>
+                <div class="experience_box">
+                    <h1 id="experience2" class="reveal" style="text-align: left !important; min-width: 35%; margin: auto">95</h1>
+                    <p class="text" style="color: #c6c5c7; padding-left: 10px" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arc</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body>

@@ -1,0 +1,28 @@
+{
+  "messages": [
+    {
+      "header": "„BETTER TO FAIL IN THE ORIGINALITY, THAN TO SUCCEED IN THE COPY...“",
+      "headerDesc": "Hello, my name is <b>Lukáš Prchal</b> and you may know me as Gennario... I am a Graphic and UX/UI designer and Java developer from Czech Republic.",
+      "buttonMore": "More about me...",
+      "buttonWorks": "See my works!",
+      "buttonUnavailable": "No longer available",
+      "buttonInquiry": "Send a inquiry",
+
+      "javaTitle": "Java development",
+      "javaDescription": "If we look into my history, I've created a lot of original minecraft plugins in Java. I don't write in Java anymore.",
+
+      "gfxTitle": "Graphic design",
+      "gfxDescription": "I have several years of experience in brading design,logo designing and creating various graphic works.",
+
+      "uxTitle": "UX/UI design",
+      "uxDescription": "I design various types of websites and mobile/desktop applications.\nBasic experience so far!"
+    }
+  ],
+  "language_menu": [
+    {
+      "title": "Language settings",
+      "cz": "Czech",
+      "en": "English"
+    }
+  ]
+}

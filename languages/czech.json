@@ -1,0 +1,28 @@
+{
+  "messages": [
+    {
+      "header": "„LEPŠÍ SELHAT ORIGINÁLNĚ, JAK USPĚT V KOPÍROVÁNÍ...“",
+      "headerDesc": "Ahoj, jmenuji se <b>Lukáš Prchal</b> a možná mě znáte pod přezdívkou Gennario... Jsem Grafik, UX/UI designer a Java developer z České Republiky.",
+      "buttonMore": "Více o mně...",
+      "buttonWorks": "Mé práce!",
+      "buttonUnavailable": "Již nedostupné",
+      "buttonInquiry": "Poslat poptávku",
+
+      "javaTitle": "Java programování",
+      "javaDescription": "Pokud nahlédnete do mé historie, tak jsem vytvořil spoustu originálních pluginů pro hru minecraft. Již v Javě nepíšu.",
+
+      "gfxTitle": "Grafický design",
+      "gfxDescription": "Mám několika leté zkušenosti v tvorbě brandingu,logo designu a tvorbě různých grafických prací.",
+
+      "uxTitle": "UX/UI design",
+      "uxDescription": "Věnuji se designu různých webovýxh stránek, mobilních/desktopových aplikací. Zatím zakladní zkušenosti!"
+    }
+  ],
+  "language_menu": [
+    {
+      "title": "Nastavení jazyku",
+      "cz": "Čeština",
+      "en": "Angličtina"
+    }
+  ]
+}
