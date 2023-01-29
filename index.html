@@ -148,7 +148,7 @@
                     sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Maecenas sollicitudin. Quisque
                     tincidunt scelerisque libero.</p>
 
-                <button class="button active" style="margin-top: 25px">Read more about me...</button>
+                <button id="myBtn" onclick="modalOpen('aboutModal')" class="button active" style="margin-top: 25px">Read more about me...</button>
             </div>
             <div class="container half" style="padding-top: 40px">
                 <div class="experience_box">
@@ -160,10 +160,47 @@
                     <p class="text" style="color: #c6c5c7; padding-left: 10px" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arc</p>
                 </div>
             </div>
+
+
+
+            <div class="main_project reveal">
+                <div class="container half" style="text-align: left">
+                    <h2 style="margin-right: auto; margin-left: 20px;">Line fashion</h2>
+                    <p class="text" style="margin-right: auto; margin-left: 20px">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arcu tempor neque lacinia pretium.
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arcu tempor neque lacinia pretium.
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arcu tempor neque lacinia pretium.
+                    </p>
+                    <button class="button active" style="margin-left: 20px; margin-top: 25px">Show me more...</button>
+                </div>
+                <div class="container half">
+                    <h2>hhasdas</h2>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 </div>
 
+
+<!-- Modals -->
+
+<!--  about modal  -->
+<div id="aboutModal" onclick="modalClose('aboutModal')" class="modal">
+    <div class="modal-content">
+        <i onclick="modalClose('aboutModal')" class="fa-solid fa-circle-xmark close"></i>
+        <p>Some text in\n <br>the Modal..</p>
+        <p>Some text in the Modal..</p>
+        <p>Some text in the Modal..</p>
+        <p>Some text in the Modal..</p>
+        <p>Some text in the Modal..</p>
+        <p>Some text in the Modal..</p>
+        <p>Some text in the Modal..</p>
+        <p>Some text in the Modal..</p>
+    </div>
+</div>
 
 </body>
 </html>

@@ -84,3 +84,13 @@ function incNbrRec(i, endNbr, elt) {
         }, speed);
     }
 }
+
+function modalOpen(id) {
+    document.getElementById(id).style.display = "block";
+    setTimeout(() => { document.getElementById(id).style.opacity = "100%"; }, 1);
+}
+
+function modalClose(id) {
+    document.getElementById(id).style.opacity = "0%";
+    setTimeout(() => { document.getElementById(id).style.display = "none"; }, 200);
+}
