@@ -16,6 +16,7 @@ function setLanguage(lang) {
         storage.setItem("language", lang);
     } else {
     }
+
 }
 
 function getLanguage() {

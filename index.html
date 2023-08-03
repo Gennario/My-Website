@@ -18,7 +18,7 @@
 
 
 <div class="header">
-    <div class="dropdown" style="position: absolute; right: 2%; top: -4%">
+    <div class="dropdown" style="position: absolute; right: 2%; top: -4%; z-index: 50">
         <button onclick="toggleDropdown1()"
                 style="margin-top: 50px; outline: none; padding: 7px 20px 7px 20px !important;" class="dropdown_pasive">
             <i class="fa-solid fa-language fa-xl"></i>
@@ -45,7 +45,7 @@
                                                                                        id="button_more">More about me...</b>
             </button>
             <button style="margin-top: 15px; margin-left: auto; margin-right: auto" class="button"><i
-                    class="fa-solid fa-hand-holding-heart" style="margin-right: 20px"></i><b style="font-weight: unset"
+                    class="fa-solid fa-folder-open" style="margin-right: 20px"></i><b style="font-weight: unset"
                                                                                              id="button_works">See my
                 works!</b></button>
     </div>
@@ -133,31 +133,22 @@
                 <div class="about_container" style="margin: 10px 0 0 0">
                     <p><i class="fa-solid fa-user"
                           style="margin-right: 20px; color: #c6c5c7; transform: scale(70%); margin-top: 4px"></i>
-                    <p>Who am I?</p></p>
+                    <p id="whoAmI">Who am I?</p></p>
                 </div>
 
-                <h2 style="margin: -5px 0 15px 0; text-align: left">My name is Lukáš Prchal</h2>
-                <p class="text"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arcu tempor neque lacinia
-                    pretium. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Curabitur ligula sapien,
-                    pulvinar a vestibulum quis, facilisis vel sapien. Nullam at arcu a est sollicitudin euismod. Sed vel
-                    lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Pellentesque pretium lectus id
-                    turpis. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Fusce aliquam vestibulum
-                    ipsum. Nullam dapibus fermentum ipsum. Phasellus faucibus molestie nisl. Donec quis nibh at felis
-                    congue commodo. Vivamus ac leo pretium faucibus.
-                    Nulla est. Duis condimentum augue id magna semper rutrum. In laoreet, magna id viverra tincidunt,
-                    sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Maecenas sollicitudin. Quisque
-                    tincidunt scelerisque libero.</p>
+                <h2 id="aboutTitle" style="margin: -5px 0 15px 0; text-align: left">My name is Lukáš Prchal</h2>
+                <p id="aboutDescription" class="text">and I am a student from the Czech Republic.</p>
 
                 <button id="myBtn" onclick="modalOpen('aboutModal')" class="button active" style="margin-top: 25px">Read more about me...</button>
             </div>
             <div class="container half" style="padding-top: 40px">
                 <div class="experience_box">
-                    <h1 id="experience1" class="reveal" style="text-align: left !important; min-width: 35%; margin: auto">36</h1>
-                    <p class="text" style="color: #c6c5c7; padding-left: 10px" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arc</p>
+                    <h1 id="experience1" class="reveal" style="text-align: left !important; min-width: 35%; margin: auto">5</h1>
+                    <p id="box1" class="text" style="color: #c6c5c7; padding-left: 10px" >Of active work on commissions as a Java developer, Graphic & Brand designer...</p>
                 </div>
                 <div class="experience_box">
-                    <h1 id="experience2" class="reveal" style="text-align: left !important; min-width: 35%; margin: auto">95</h1>
-                    <p class="text" style="color: #c6c5c7; padding-left: 10px" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arc</p>
+                    <h1 id="experience2" class="reveal" style="text-align: left !important; min-width: 35%; margin: auto">50</h1>
+                    <p id="box2" class="text" style="color: #c6c5c7; padding-left: 10px" >Of already finished commissions by today...</p>
                 </div>
             </div>
 
@@ -182,6 +173,22 @@
 
         </div>
     </div>
+
+
+    <script>
+        document.getElementById("button_unavailable").textContent = obj.messages[0].buttonUnavailable;
+        document.getElementById("button_inquiry").textContent = obj.messages[0].buttonInquiry;
+        document.getElementById("button_inquiry2").textContent = obj.messages[0].buttonInquiry;
+
+        document.getElementById("java_box_title").textContent = obj.messages[0].javaTitle;
+        document.getElementById("java_box_description").textContent = obj.messages[0].javaDescription;
+
+        document.getElementById("gfx_box_title").textContent = obj.messages[0].gfxTitle;
+        document.getElementById("gfx_box_description").textContent = obj.messages[0].gfxDescription;
+
+        document.getElementById("ux_box_title").textContent = obj.messages[0].uxTitle;
+        document.getElementById("ux_box_description").textContent = obj.messages[0].uxDescription;
+    </script>
 </div>
 
 
